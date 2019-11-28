@@ -2,7 +2,7 @@
   "name": "is-style-prop-valid",
   "version": "0.0.0",
   "description": "Utilities for CSS style properties",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "private": false,
   "scripts": {
     "prestart": "zero prestart",
