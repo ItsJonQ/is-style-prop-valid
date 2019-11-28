@@ -2,12 +2,16 @@
   "name": "is-style-prop-valid",
   "version": "0.0.4",
   "description": "Utilities for CSS style properties",
-  "main": "dist/index.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/es/index.js",
+  "sideEffects": false,
   "private": false,
   "scripts": {
     "prestart": "zero prestart",
     "coverage": "nyc report --temp-directory=coverage --reporter=text-lcov | coveralls",
-    "build": "zero build",
+    "build:es": "BUILD_FORMAT=es zero build -d dist/es",
+    "build:cjs": "BUILD_FORMAT=cjs zero build -d dist/cjs",
+    "build": "npm run build:cjs && npm run build:es -- --no-clean",
     "lint": "zero lint",
     "test": "zero test",
     "test:coverage": "zero test --coverage",
@@ -42,7 +46,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@itsjonq/zero": "^4.1.4",
+    "@itsjonq/zero": "^4.1.6",
     "coveralls": "3.0.9",
     "nyc": "14.1.1"
   },
