@@ -42,7 +42,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@itsjonq/zero": "^4.1.2",
+    "@itsjonq/zero": "^4.1.4",
     "coveralls": "3.0.9",
     "nyc": "14.1.1"
   },
