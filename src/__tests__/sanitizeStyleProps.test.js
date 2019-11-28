@@ -56,7 +56,7 @@ describe("sanitizeStyleProps", () => {
 
 		sanitizeStyleProps(props);
 
-		expect(spy).toHaveBeenCalled();
+		expect(spy).toHaveBeenCalledWith(expect.anything());
 
 		spy.mockRestore();
 	});
