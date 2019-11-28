@@ -1,6 +1,6 @@
 # is-style-prop-valid
 
-> Utilities for style properties
+> Utilities for CSS style properties
 
 ## Installation
 
