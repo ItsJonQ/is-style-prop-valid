@@ -6,6 +6,7 @@
   "private": false,
   "scripts": {
     "prestart": "zero prestart",
+    "coverage": "nyc report --temp-directory=coverage --reporter=text-lcov | coveralls",
     "build": "zero build",
     "lint": "zero lint",
     "test": "zero test",
@@ -32,7 +33,9 @@
   "homepage": "https://github.com/itsjonq/is-style-prop-valid#readme",
   "license": "MIT",
   "devDependencies": {
-    "@itsjonq/zero": "4.0.5"
+    "@itsjonq/zero": "4.0.5",
+    "coveralls": "3.0.9",
+    "nyc": "14.1.1"
   },
   "publishConfig": {
     "access": "public"
