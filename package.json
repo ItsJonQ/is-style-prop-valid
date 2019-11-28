@@ -1,6 +1,6 @@
 {
   "name": "is-style-prop-valid",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Utilities for CSS style properties",
   "main": "dist/index.js",
   "private": false,
