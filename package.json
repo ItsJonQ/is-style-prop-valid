@@ -41,6 +41,7 @@
     "access": "public"
   },
   "dependencies": {
-    "tiny-warning": "1.0.3"
+    "memoize-one": "^5.1.1",
+    "tiny-warning": "^1.0.3"
   }
 }
