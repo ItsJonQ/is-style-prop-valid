@@ -128,3 +128,7 @@ convertUnitValue("padding", 10);
 convertUnitValue("zIndex", 10);
 // 10
 ```
+
+## Related
+
+-   [@emotion/is-prop-valid](https://github.com/emotion-js/emotion/tree/master/packages/is-prop-valid)
