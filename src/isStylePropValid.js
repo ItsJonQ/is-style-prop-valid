@@ -1,8 +1,13 @@
-import { validStyleKeys } from "./CSSProperty";
+import { validStyleProps } from "./CSSProperty";
 import { isString } from "./utils";
 
-export function isStylePropValid(key) {
-	return isString(key) && validStyleKeys.includes(key);
+/**
+ * Determines if the prop is valid CSSProperty.
+ * @param {string} prop The prop to check.
+ * @returns {boolean} The result.
+ */
+export function isStylePropValid(prop) {
+	return isString(prop) && validStyleProps.includes(prop);
 }
 
 export default isStylePropValid;

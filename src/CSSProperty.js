@@ -1,4 +1,4 @@
-export const unitlessStyleKeys = [
+export const unitlessStyleProps = [
 	"animationIterationCount",
 	"borderImageOutset",
 	"borderImageSlice",
@@ -43,7 +43,7 @@ export const unitlessStyleKeys = [
 	"strokeWidth"
 ];
 
-export const validStyleKeys = [
+export const validStyleProps = [
 	"alignContent",
 	"alignItems",
 	"alignSelf",
@@ -422,17 +422,17 @@ const prefixes = ["webkit", "ms", "moz"];
 /**
  * Add vendor prefixing to unitless style keys.
  */
-unitlessStyleKeys.forEach(prop => {
+unitlessStyleProps.forEach(prop => {
 	prefixes.forEach(prefix => {
-		unitlessStyleKeys.push(prefixKey(prefix, prop));
+		unitlessStyleProps.push(prefixKey(prefix, prop));
 	});
 });
 
 /**
  * Add all unitless style keys to valid style keys.
  */
-unitlessStyleKeys.forEach(prop => {
-	if (validStyleKeys.includes(prop)) {
-		validStyleKeys.push(prop);
+unitlessStyleProps.forEach(prop => {
+	if (validStyleProps.includes(prop)) {
+		validStyleProps.push(prop);
 	}
 });
