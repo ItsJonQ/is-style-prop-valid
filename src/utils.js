@@ -1,5 +1,9 @@
 export function isPlainObject(value) {
-	return value.toString() === "[object Object]";
+	return isDefined(value) && value.toString() === "[object Object]";
+}
+
+export function isDefined(value) {
+	return typeof value !== "undefined" && value !== null;
 }
 
 export function isString(value) {

@@ -1,4 +1,49 @@
-export const VALID_STYLE_KEYS = [
+export const unitlessStyleKeys = [
+	"animationIterationCount",
+	"borderImageOutset",
+	"borderImageSlice",
+	"borderImageWidth",
+	"boxFlex",
+	"boxFlexGroup",
+	"boxOrdinalGroup",
+	"columnCount",
+	"columns",
+	"flex",
+	"flexGrow",
+	"flexPositive",
+	"flexShrink",
+	"flexNegative",
+	"flexOrder",
+	"gridArea",
+	"gridRow",
+	"gridRowEnd",
+	"gridRowSpan",
+	"gridRowStart",
+	"gridColumn",
+	"gridColumnEnd",
+	"gridColumnSpan",
+	"gridColumnStart",
+	"fontWeight",
+	"lineClamp",
+	"lineHeight",
+	"opacity",
+	"order",
+	"orphans",
+	"tabSize",
+	"widows",
+	"zIndex",
+	"zoom",
+	"fillOpacity",
+	"floodOpacity",
+	"stopOpacity",
+	"strokeDasharray",
+	"strokeDashoffset",
+	"strokeMiterlimit",
+	"strokeOpacity",
+	"strokeWidth"
+];
+
+export const validStyleKeys = [
 	"alignContent",
 	"alignItems",
 	"alignSelf",
@@ -13,6 +58,7 @@ export const VALID_STYLE_KEYS = [
 	"animationName",
 	"animationPlayState",
 	"animationTimingFunction",
+	"appearance",
 	"backdropFilter",
 	"backfaceVisibility",
 	"background",
@@ -356,3 +402,37 @@ export const VALID_STYLE_KEYS = [
 	"zIndex",
 	"zoom"
 ];
+
+/**
+ * @param {string} prefix vendor-specific prefix, eg: Webkit
+ * @param {string} key style name, eg: transitionDuration
+ * @return {string} style name prefixed with `prefix`, properly camelCased, eg:
+ * WebkitTransitionDuration
+ */
+function prefixKey(prefix, key) {
+	return prefix + key.charAt(0).toUpperCase() + key.substring(1);
+}
+
+/**
+ * Support style names that may come passed in prefixed by adding permutations
+ * of vendor prefixes.
+ */
+const prefixes = ["webkit", "ms", "moz"];
+
+/**
+ * Add vendor prefixing to unitless style keys.
+ */
+unitlessStyleKeys.forEach(prop => {
+	prefixes.forEach(prefix => {
+		unitlessStyleKeys.push(prefixKey(prefix, prop));
+	});
+});
+
+/**
+ * Add all unitless style keys to valid style keys.
+ */
+unitlessStyleKeys.forEach(prop => {
+	if (validStyleKeys.includes(prop)) {
+		validStyleKeys.push(prop);
+	}
+});

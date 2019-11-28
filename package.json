@@ -1,7 +1,7 @@
 {
-  "name": "is-style-valid",
+  "name": "is-style-prop-valid",
   "version": "0.0.0",
-  "description": "Module generated with Zero",
+  "description": "Utilities for CSS style properties",
   "main": "src/index.js",
   "private": false,
   "scripts": {
@@ -9,6 +9,7 @@
     "build": "zero build",
     "lint": "zero lint",
     "test": "zero test",
+    "test:coverage": "zero test --coverage",
     "format": "zero format",
     "validate": "zero validate",
     "release": "zero release",
