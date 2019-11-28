@@ -33,7 +33,7 @@
   "homepage": "https://github.com/itsjonq/is-style-prop-valid#readme",
   "license": "MIT",
   "devDependencies": {
-    "@itsjonq/zero": "4.0.5",
+    "@itsjonq/zero": "^4.1.0",
     "coveralls": "3.0.9",
     "nyc": "14.1.1"
   },
