@@ -8,6 +8,25 @@
 npm install --save is-style-prop-valid
 ```
 
+## Usage
+
+A great use-case for these utilities is to prepare [object styles](https://emotion.sh/docs/object-styles) for libraries like [Emotion](https://emotion.sh/docs/introduction) or [Style Components](https://www.styled-components.com/) for use within [React](https://reactjs.org/).
+
+##### Example
+
+```jsx
+import styled from "@emotion/styled";
+import { sanitizeStyleProps } from "is-style-prop-valid";
+
+const CustomView = styled.div({}, sanitizeStyleProps);
+
+const Example = () => {
+	return <CustomView background="red" padding={10} />;
+};
+```
+
+---
+
 ## Utilities
 
 ### isStylePropValid(prop)
