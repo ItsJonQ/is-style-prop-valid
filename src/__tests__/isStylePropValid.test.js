@@ -1,0 +1,1 @@
+import isStylePropValid from "../isStylePropValid";

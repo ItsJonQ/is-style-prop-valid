@@ -1,0 +1,33 @@
+{
+  "name": "is-style-valid",
+  "version": "0.0.0",
+  "description": "Module generated with Zero",
+  "main": "src/index.js",
+  "private": false,
+  "scripts": {
+    "prestart": "zero prestart",
+    "build": "zero build",
+    "lint": "zero lint",
+    "test": "zero test",
+    "format": "zero format",
+    "validate": "zero validate",
+    "release": "zero release",
+    "version": "zero build",
+    "precommit": "zero pre-commit"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@itsjonq/zero": "4.0.5"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "tiny-warning": "1.0.3"
+  }
+}
