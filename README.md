@@ -2,8 +2,25 @@
 
 [![Build Status](https://travis-ci.org/ItsJonQ/is-style-prop-valid.svg?branch=master)](https://travis-ci.org/ItsJonQ/is-style-prop-valid)
 [![Coverage Status](https://coveralls.io/repos/github/ItsJonQ/is-style-prop-valid/badge.svg?branch=master)](https://coveralls.io/github/ItsJonQ/is-style-prop-valid?branch=master)
+[![Bundle size](https://badgen.net/bundlephobia/minzip/is-style-prop-valid)](https://bundlephobia.com/result?p=is-style-prop-valid)
 
 > Utilities for CSS style properties
+
+## Table of Contents
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+-   [Installation](#installation)
+-   [Usage](#usage)
+-   [Utilities](#utilities)
+    -   [isStylePropValid(prop)](#isstylepropvalidprop)
+    -   [sanitizeStyleProps(props)](#sanitizestylepropsprops)
+    -   [isUnitlessValue(prop)](#isunitlessvalueprop)
+    -   [convertUnitValue(prop, value)](#convertunitvalueprop-value)
+-   [Related](#related)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Installation
 
