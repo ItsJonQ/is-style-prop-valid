@@ -1,4 +1,4 @@
-# is-style-prop-valid
+# 🎒 is-style-prop-valid
 
 [![Build Status](https://travis-ci.org/ItsJonQ/is-style-prop-valid.svg?branch=master)](https://travis-ci.org/ItsJonQ/is-style-prop-valid)
 [![Coverage Status](https://coveralls.io/repos/github/ItsJonQ/is-style-prop-valid/badge.svg?branch=master)](https://coveralls.io/github/ItsJonQ/is-style-prop-valid?branch=master)
