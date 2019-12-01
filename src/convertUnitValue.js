@@ -1,5 +1,5 @@
 import { isUnitlessValue } from "./isUnitlessValue";
-import { isNumber } from "./utils";
+import { is } from "./utils";
 
 /**
  * Converts a non-unitless CSSProperty value to px.
@@ -8,7 +8,7 @@ import { isNumber } from "./utils";
  * @returns {string|number} The converted value, if applicable.
  */
 export function convertUnitValue(prop, value) {
-	if (!isNumber(value)) {
+	if (!is.number(value)) {
 		return value;
 	}
 

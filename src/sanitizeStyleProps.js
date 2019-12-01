@@ -2,7 +2,7 @@ import memoize from "memoize-one";
 import warning from "tiny-warning";
 import { isStylePropValid } from "./isStylePropValid";
 import { convertUnitValue } from "./convertUnitValue";
-import { isPlainObject, isNumber, isString } from "./utils";
+import { is } from "./utils";
 
 /**
  * Removes non style CSSProperty props from an object. Converts
@@ -11,7 +11,7 @@ import { isPlainObject, isNumber, isString } from "./utils";
  * @returns {object} A collection of style CSSProperty safe key/value pairs.
  */
 export function rawSanitizeStyleProps(props) {
-	if (!isPlainObject(props)) {
+	if (!is.plainObject(props)) {
 		warning(false, "prop needs to be a plain object.");
 		return {};
 	}
@@ -19,7 +19,7 @@ export function rawSanitizeStyleProps(props) {
 
 	return keys.reduce((nextProps, prop) => {
 		const value = props[prop];
-		const isValueValid = isString(value) || isNumber(value);
+		const isValueValid = is.string(value) || is.number(value);
 
 		if (isValueValid && isStylePropValid(prop)) {
 			const nextValue = convertUnitValue(prop, value);
